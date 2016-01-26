@@ -6,6 +6,10 @@ get_header();
 
 <main id="main-content">
 
+  <a href="<?php echo home_url('/contacto'); ?>">
+    <nav id="gradient"></nav>
+  </a>
+
   <!-- main posts loop -->
   <section id="posts" class="container">
 <?php
@@ -14,10 +18,7 @@ if( have_posts() ) {
     the_post();
 ?>
     <article <?php post_class('row'); ?> id="post-<?php the_ID(); ?>">
-      <div class="col col-5">
-        <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-      </div>
-      <div class="col col-5">
+      <div class="col col-12">
         <?php the_content(); ?>
       </div>
     </article>
@@ -34,8 +35,6 @@ if( have_posts() ) {
 
   <!-- end posts -->
   </section>
-
-  <?php get_template_part('partials/pagination'); ?>
 
 <!-- end main-content -->
 

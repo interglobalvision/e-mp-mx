@@ -1,5 +1,17 @@
     <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col col-2"></div>
+          <div class="col col-10">
+            Manufacturados en papel
+          </div>
+        </div>
+      </div>
     </footer>
+
+    <div id="loading">
+      loading gif goes here
+    </div>
 
   </section>
 
