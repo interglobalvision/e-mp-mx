@@ -69,11 +69,11 @@
           </h1>
         </div>
       </div>
-      <?php if ($templateConditionalIsIndex) {
-      ?>
-        <!-- echo subtitle -->
-        <!-- A través del desarrollo de cinco colecciones E-MP pretende abrir un universo de información y conocimiento que no había sido atendido ampliamente. -->
-      <?php
-      } ?>
+      <div id="subheader" class="row">
+        <div class="col col-12">
+          <!-- how do we include this copy? site options? -->
+          A través del desarrollo de cinco colecciones E-MP pretende abrir un universo de información y conocimiento que no había sido atendido ampliamente.
+        </div>
+      </div>
     </div>
   </header>
