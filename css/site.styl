@@ -1,7 +1,7 @@
 @import "kouto-swiss"
 
+@import "fonts"
 @import "helpers"
-@import "genericons"
 
 meyer-reset()
 box-sizing-reset()
@@ -59,7 +59,7 @@ $margin-tiny = ($gutter / 2)
 $margin-basic = ($gutter * 2)
 $margin-large = ($gutter * 5)
 
-$font-size-basic = 15px
+$font-size-basic = 30px
 $font-leading-basic = 1.35em
 $font-tracking-basic = 0.001em
 
@@ -70,19 +70,22 @@ $color-white-soft = rgb(253, 253, 253)
 // TYPOGRAPHY
 
 body
-  font-family: helvetica, arial, sans-serif
+  font-family: 'Kepler Std', serif
   font-size: $font-size-basic
   line-height: $font-leading-basic
   letter-spacing: $font-tracking-basic
 
+.font-sans
+  font-family: 'Circular Std Book', serif
+
 h1
-  font-size: 3em
+  font-size: 1.5em
 
 h2
-  font-size: 2em
+  font-size: 1.3em
 
 h3
-  font-size: 1.5em
+  font-size: 1.1em
 
 p
   margin-bottom: 1em
