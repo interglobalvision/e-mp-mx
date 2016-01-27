@@ -55,5 +55,25 @@
 
   <!-- start content -->
   <header id="header">
-    <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+    <div class="container">
+      <div class="row">
+        <div class="col col-2"></div>
+        <div class="col col-10">
+          <h1>
+            <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+            <?php if ($templateConditional) {
+            ?>
+              <!-- echo site section name -->
+            <?php
+            } ?>
+          </h1>
+        </div>
+      </div>
+      <div id="subheader" class="row">
+        <div class="col col-12">
+          <!-- how do we include this copy? site options? -->
+          A través del desarrollo de cinco colecciones E-MP pretende abrir un universo de información y conocimiento que no había sido atendido ampliamente.
+        </div>
+      </div>
+    </div>
   </header>

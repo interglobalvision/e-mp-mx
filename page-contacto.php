@@ -1,10 +1,18 @@
 <?php
+/*
+Template Name: Contacto
+*/
 get_header();
 ?>
 
 <!-- main content -->
 
 <main id="main-content">
+
+  <!-- this link needs to go to the latest single post -->
+  <a href="<?php echo home_url('/'); ?>">
+    <nav id="gradient"></nav>
+  </a>
 
   <!-- main posts loop -->
   <section id="posts" class="container">
@@ -14,9 +22,7 @@ if( have_posts() ) {
     the_post();
 ?>
     <article <?php post_class('row'); ?> id="post-<?php the_ID(); ?>">
-      <div class="col col-5">
-        <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-      </div>
+      <div class="col col-7"></div>
       <div class="col col-5">
         <?php the_content(); ?>
       </div>
@@ -34,8 +40,6 @@ if( have_posts() ) {
 
   <!-- end posts -->
   </section>
-
-  <?php get_template_part('partials/pagination'); ?>
 
 <!-- end main-content -->
 

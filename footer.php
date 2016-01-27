@@ -1,7 +1,23 @@
     <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col col-2"></div>
+          <div class="col col-10">
+            Manufacturados en papel
+          </div>
+        </div>
+      </div>
     </footer>
 
   </section>
+
+  <div id="loading">
+    <div class="u-holder u-align-center">
+      <div class="u-held">
+        loading gif goes here
+      </div>
+    </div>
+  </div>
 
   <?php get_template_part('partials/scripts'); ?>
 
