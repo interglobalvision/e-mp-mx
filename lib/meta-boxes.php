@@ -46,15 +46,15 @@ function igv_cmb_metaboxes() {
   ) );
 
   $post_meta->add_field( array(
-    'name'       => __( 'Unreleased?', 'cmb2' ),
-    'desc'       => __( 'if this book is forthcoming and not released check this box', 'cmb2' ),
+    'name'       => __( 'Próximo', 'cmb2' ),
+    'desc'       => __( 'Si este libro está próximo a salir marca este campo', 'cmb2' ),
     'id'         => $prefix . 'if_forthcoming',
     'type'       => 'checkbox',
   ) );
 
   $post_meta->add_field( array(
-    'name'       => __( 'Release data', 'cmb2' ),
-    'desc'       => __( 'date for release of book. Can be in the future', 'cmb2' ),
+    'name'       => __( 'Fecha de lanzamiento', 'cmb2' ),
+    'desc'       => __( 'Fecha de lanzamiento de este libro. Puede ser una fecha futura', 'cmb2' ),
     'id'         => $prefix . 'release_date',
     'type'       => 'text_date',
   ) );
