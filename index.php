@@ -12,12 +12,11 @@ get_header();
   $categories = get_terms('category', array('orderby' => 'id', 'hide_empty' => false));
 
   if ($categories) {
-    $i = 1;
-    foreach($categories as $category) {
+    foreach($categories as $i => $category) {
 ?>
     <div class="row">
 <?php
-      if ($i % 2 === 0) {
+      if ($i % 2 !== 0) {
 ?>
       <div class="col col-8">
         <h2><?php echo $category->name; ?></h2>
@@ -69,7 +68,7 @@ get_header();
               <span class="book-date">Próximo</span>
               <?php echo $book->post_title; ?>
             </div>
-<?php 
+<?php
           }
         }
 ?>
@@ -79,7 +78,6 @@ get_header();
 ?>
     </div>
 <?php
-      $i++;
     }
   }
 ?>
