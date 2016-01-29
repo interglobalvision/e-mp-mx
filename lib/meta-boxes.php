@@ -31,13 +31,26 @@ return $post_options;
 add_action( 'cmb2_init', 'igv_cmb_metaboxes' );
 function igv_cmb_metaboxes() {
 
-	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_igv_';
+  // Start with an underscore to hide fields from custom fields list
+  $prefix = '_igv_';
 
-	/**
-	 * Metaboxes declarations here
+  /**
+   * Metaboxes declarations here
    * Reference: https://github.com/WebDevStudios/CMB2/blob/master/example-functions.php
-	 */
+   */
+
+  $post_meta = new_cmb2_box( array(
+    'id'            => $prefix . 'metabox',
+    'title'         => __( 'Post Metabox', 'cmb2' ),
+    'object_types'  => array( 'post', ), // Post type
+  ) );
+
+  $post_meta->add_field( array(
+    'name'       => __( 'Fecha de lanzamiento', 'cmb2' ),
+    'desc'       => __( 'Fecha de lanzamiento de este libro. Puede ser una fecha futura (opcional)', 'cmb2' ),
+    'id'         => $prefix . 'release_date',
+    'type'       => 'text_date',
+  ) );
 
 }
 ?>
