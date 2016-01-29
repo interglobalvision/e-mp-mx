@@ -11,13 +11,7 @@
 
   </section>
 
-  <div id="loading">
-    <div class="u-holder u-align-center">
-      <div class="u-held">
-        loading gif goes here
-      </div>
-    </div>
-  </div>
+  <?php get_template_part('partials/loading'); ?>
 
   <?php get_template_part('partials/scripts'); ?>
 

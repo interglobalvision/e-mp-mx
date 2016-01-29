@@ -623,6 +623,7 @@ img {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 999;
 }
 .language-chooser {
   font-size: 0.4em;
@@ -639,6 +640,7 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 999;
 }
 .page #footer,
 .single #footer {
@@ -660,7 +662,8 @@ img {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: -999;
+  z-index: 666;
+  background-color: #fdfdfd;
 }
 #subheader {
   display: none;
