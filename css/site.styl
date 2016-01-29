@@ -6,7 +6,7 @@
 meyer-reset()
 box-sizing-reset()
 normalize()
-
+ 
 
 $cols = 12
 $col = 70px
@@ -61,10 +61,12 @@ $margin-large = ($gutter * 5)
 
 $font-size-basic = 30px
 $font-leading-basic = 1.35em
-$font-tracking-basic = 0.001em
+$font-tracking-basic = -0.005em
 
 $color-black-soft = rgb(14, 14, 14)
 $color-white-soft = rgb(253, 253, 253)
+
+$color-blue = rgb(1, 37, 243)
 
 
 // TYPOGRAPHY
@@ -78,14 +80,27 @@ body
 .font-sans
   font-family: 'Circular Std Book', serif
 
+.font-mono
+  font-size: 0.6em
+  line-height: $font-leading-basic
+  font-family: monospace
+
+h1, h2, h3, h4, h5, h6
+  margin: 0.1em 0
+
 h1
-  font-size: 1.5em
+  font-size: 1.7em
 
 h2
-  font-size: 1.3em
+  font-size: 1.5em
 
 h3
-  font-size: 1.1em
+  font-size: 1.2em
+
+h4
+  font-size: 0.6em
+  line-height: $font-leading-basic
+  font-family: monospace
 
 p
   margin-bottom: 1em
@@ -94,11 +109,11 @@ p
 // LINKS
 
 a, a:active, a:visited
-  color:inherit
-  transition:opacity .2s
-  &:hover
-    opacity:.5
+  color: $color-blue
+  text-decoration: none
 
+a.color-black
+  color: $color-black-soft
 
 // BASIC
 
@@ -111,7 +126,7 @@ img
   height: auto
 
 
-// FIXED ELEMENTS
+// HEADER
 
 #header
   position: fixed
@@ -119,6 +134,16 @@ img
   left: 0
   right: 0
   z-index: 999
+
+.language-chooser
+  font-size: 0.4em
+  text-transform: uppercase
+  line-height: $font-leading-basic
+  font-family: monospace
+  li
+    display: inline-block
+
+// FOOTER
 
 #footer
   display: none
@@ -132,13 +157,16 @@ img
   #footer
     display: block
 
+
+// FIXED ELEMENTS
+
 #gradient
   position: fixed
   top: 0
   right: 0
   bottom: 0
   width: 10%
-  background-image: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(216,216,216,0.33) 33%,rgba(63,63,63,0.7) 70%,rgba(19,19,19,1) 100%)
+  background-image: linear-gradient(to right, rgba(230,230,230,0) 0%,rgba(216,216,216,0.33) 33%,rgba(63,63,63,0.7) 70%,rgba(19,19,19,1) 100%)
 
 #loading
   position: fixed

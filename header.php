@@ -58,15 +58,14 @@
     <div class="container">
       <div class="row">
         <div class="col col-2"></div>
-        <div class="col col-10">
-          <h1>
-            <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
-            <?php if ($templateConditional) {
-            ?>
-              <!-- echo site section name -->
-            <?php
-            } ?>
-          </h1>
+        <div class="col col-8">
+          <a href="<?php echo home_url(); ?>" class="font-sans color-black"><?php bloginfo('name'); ?></a>
+          <?php if (is_page()) {
+            /*  echo get_the_title(); */
+          } ?>
+        </div>
+        <div class="col col-2">
+          <?php echo qtranxf_generateLanguageSelectCode('both'); ?>
         </div>
       </div>
       <div id="subheader" class="row">

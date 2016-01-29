@@ -2,7 +2,7 @@
       <div class="container">
         <div class="row">
           <div class="col col-2"></div>
-          <div class="col col-10">
+          <div class="col col-10 font-sans">
             Manufacturados en papel
           </div>
         </div>
