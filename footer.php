@@ -2,7 +2,7 @@
       <div class="container">
         <div class="row">
           <div class="col col-2"></div>
-          <div class="col col-10">
+          <div class="col col-10 font-sans">
             Manufacturados en papel
           </div>
         </div>
@@ -11,13 +11,7 @@
 
   </section>
 
-  <div id="loading">
-    <div class="u-holder u-align-center">
-      <div class="u-held">
-        loading gif goes here
-      </div>
-    </div>
-  </div>
+  <?php get_template_part('partials/loading'); ?>
 
   <?php get_template_part('partials/scripts'); ?>
 
