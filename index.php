@@ -12,12 +12,11 @@ get_header();
   $categories = get_terms('category', array('orderby' => 'id', 'hide_empty' => false));
 
   if ($categories) {
-    $i = 1;
-    foreach($categories as $category) {
+    foreach($categories as $i => $category) {
 ?>
     <div class="row">
 <?php
-      if ($i % 2 === 0) {
+      if ($i % 2 !== 0) {
 ?>
       <div class="col col-8">
         <h2><?php echo $category->name; ?></h2>
@@ -56,16 +55,20 @@ get_header();
 
             \Moment\Moment::setLocale($locale);
             $m = new \Moment\Moment($date);
+?>
 
-            echo '<div class="collection-book">';
-            echo '<span class="book-date">' . $m->format('M Y') . '</span>';
-            echo '<a href="' . get_permalink($book->ID) . '">' . $book->post_title . '</a>';
-            echo '</div>';
+            <div class="collection-book">'
+              <span class="book-date"><?php echo $m->format('M Y'); ?></span>
+              <a href="<?php echo get_permalink($book->ID); ?>"><?php echo $book->post_title; ?></a>
+            </div>
+<?php
           } else {
-            echo '<div class="collection-book">';
-            echo '<span class="book-date">Próximo</span>';
-            echo $book->post_title;
-            echo '</div>';
+?>
+            <div class="collection-book">
+              <span class="book-date">Próximo</span>
+              <?php echo $book->post_title; ?>
+            </div>
+<?php
           }
         }
 ?>
@@ -75,7 +78,6 @@ get_header();
 ?>
     </div>
 <?php
-      $i++;
     }
   }
 ?>
