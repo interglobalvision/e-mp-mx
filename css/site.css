@@ -674,6 +674,13 @@ img {
 #main-content {
   margin-top: 80px;
 }
+.collection-book {
+  margin-bottom: 1em;
+}
+.book-date {
+  text-transform: capitalize;
+  display: block;
+}
 @media screen and (max-width: 1032px) {
   html {
     width: 100%;

@@ -9,33 +9,79 @@ get_header();
   <!-- main posts loop -->
   <section id="posts" class="container">
 <?php
-if( have_posts() ) {
-  while( have_posts() ) {
-    the_post();
-?>
-    <article <?php post_class('row'); ?> id="post-<?php the_ID(); ?>">
-      <div class="col col-5">
-        <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-      </div>
-      <div class="col col-5">
-        <?php the_content(); ?>
-      </div>
-    </article>
+  $categories = get_terms('category', array('orderby' => 'id', 'hide_empty' => false));
 
-<?php
-  }
-} else {
+  if ($categories) {
+    $i = 1;
+    foreach($categories as $category) {
 ?>
     <div class="row">
-      <div class="col col-12 u-alert"><?php _e('Sorry, no posts matched your criteria'); ?></div>
+<?php
+      if ($i % 2 === 0) {
+?>
+      <div class="col col-8">
+        <h2><?php echo $category->name; ?></h2>
+        <p><?php echo $category->description; ?></p>
+      </div>
+<?php
+      } else {
+?>
+      <div class="col col-2"></div>
+      <div class="col col-6">
+        <h2><?php echo $category->name; ?></h2>
+        <p><?php echo $category->description; ?></p>
+      </div>
+<?php
+      }
+      $books = get_posts(array(
+        'category' => $category->term_taxonomy_id,
+      ));
+
+      if ($books) {
+?>
+       <div class="col col-4">
+        <h3>Titulos</h3>
+<?php
+        foreach ($books as $book) {
+          $releaseDate = get_post_meta($book->ID, '_igv_release_date');
+          if (!empty($releaseDate)) {
+
+            $date = date_create_from_format('d/m/Y', $releaseDate);
+
+            if (qtranxf_getLanguage() == 'es') {
+              $locale = 'es_ES';
+            } else {
+              $locale = 'en_US';
+            }
+
+            \Moment\Moment::setLocale($locale);
+            $m = new \Moment\Moment($date);
+
+            echo '<div class="collection-book">';
+            echo '<span class="book-date">' . $m->format('M Y') . '</span>';
+            echo '<a href="' . get_permalink($book->ID) . '">' . $book->post_title . '</a>';
+            echo '</div>';
+          } else {
+            echo '<div class="collection-book">';
+            echo '<span class="book-date">Próximo</span>';
+            echo $book->post_title;
+            echo '</div>';
+          }
+        }
+?>
+      </div>
+<?php
+      }
+?>
     </div>
 <?php
-} ?>
+      $i++;
+    }
+  }
+?>
 
   <!-- end posts -->
   </section>
-
-  <?php get_template_part('partials/pagination'); ?>
 
 <!-- end main-content -->
 
