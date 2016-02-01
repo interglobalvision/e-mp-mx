@@ -14,7 +14,7 @@ get_header();
   if ($categories) {
     foreach($categories as $i => $category) {
 ?>
-    <div class="row">
+    <div class="row collection">
 <?php
       if ($i % 2 !== 0) {
 ?>
@@ -39,7 +39,7 @@ get_header();
       if ($books) {
 ?>
        <div class="col col-4">
-        <h3>Titulos</h3>
+        <h2>Titulos</h2>
 <?php
         foreach ($books as $book) {
           $releaseDate = get_post_meta($book->ID, '_igv_release_date');

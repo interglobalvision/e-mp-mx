@@ -6,7 +6,7 @@
 meyer-reset()
 box-sizing-reset()
 normalize()
- 
+
 
 $cols = 12
 $col = 70px
@@ -89,10 +89,10 @@ h1, h2, h3, h4, h5, h6
   margin: 0.1em 0
 
 h1
-  font-size: 1.7em
+  font-size: 2em
 
 h2
-  font-size: 1.5em
+  font-size: 1.8em
 
 h3
   font-size: 1.2em
@@ -134,6 +134,8 @@ img
   left: 0
   right: 0
   z-index: 999
+  padding: $margin-basic 0 $margin-basic 0
+  background-color: $color-white-soft
 
 .language-chooser
   font-size: 0.4em
@@ -182,24 +184,27 @@ img
 
 #subheader
   display: none
+  margin-top: $margin-small
 
-.index
+.blog
   #subheader
     display: block
 
-#main-content
-  // is this margin does with js tho?
-  margin-top: $margin-large
 
 // COLLECTIONS
 
+.collection
+  margin-bottom: $margin-basic
+
 .collection-book
-  margin-bottom: 1em
+  font-size: 0.6em
+  line-height: $font-leading-basic
+  font-family: monospace
+  margin-bottom: $margin-small
 
 .book-date
   text-transform: capitalize
   display: block
-
 
 // MEDIA QUERIES
 

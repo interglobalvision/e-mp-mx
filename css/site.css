@@ -585,10 +585,10 @@ h6 {
   margin: 0.1em 0;
 }
 h1 {
-  font-size: 1.7em;
+  font-size: 2em;
 }
 h2 {
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 h3 {
   font-size: 1.2em;
@@ -624,6 +624,8 @@ img {
   left: 0;
   right: 0;
   z-index: 999;
+  padding: 32px 0 32px 0;
+  background-color: #fdfdfd;
 }
 .language-chooser {
   font-size: 0.4em;
@@ -667,15 +669,19 @@ img {
 }
 #subheader {
   display: none;
+  margin-top: 16px;
 }
-.index #subheader {
+.blog #subheader {
   display: block;
 }
-#main-content {
-  margin-top: 80px;
+.collection {
+  margin-bottom: 32px;
 }
 .collection-book {
-  margin-bottom: 1em;
+  font-size: 0.6em;
+  line-height: 1.35em;
+  font-family: monospace;
+  margin-bottom: 16px;
 }
 .book-date {
   text-transform: capitalize;
