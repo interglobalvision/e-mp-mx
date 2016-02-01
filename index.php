@@ -45,8 +45,6 @@ get_header();
           $releaseDate = get_post_meta($book->ID, '_igv_release_date');
           if (!empty($releaseDate)) {
 
-            $date = date_create_from_format('d/m/Y', $releaseDate);
-
             if (qtranxf_getLanguage() == 'es') {
               $locale = 'es_ES';
             } else {
@@ -54,10 +52,10 @@ get_header();
             }
 
             \Moment\Moment::setLocale($locale);
-            $m = new \Moment\Moment($date);
+            $m = new \Moment\Moment($releaseDate[0]);
 ?>
 
-            <div class="collection-book">'
+            <div class="collection-book">
               <span class="book-date"><?php echo $m->format('M Y'); ?></span>
               <a href="<?php echo get_permalink($book->ID); ?>"><?php echo $book->post_title; ?></a>
             </div>
