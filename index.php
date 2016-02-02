@@ -56,6 +56,7 @@ get_header();
 ?>
 
             <div class="collection-book">
+              <div class="book-image"><?php the_post_thumbnail('book-cover'); ?></div>
               <span class="book-date"><?php echo $m->format('M Y'); ?></span>
               <a href="<?php echo get_permalink($book->ID); ?>"><?php echo $book->post_title; ?></a>
             </div>
@@ -63,6 +64,7 @@ get_header();
           } else {
 ?>
             <div class="collection-book">
+              <div class="book-image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/dist/e-mp-blank.jpg" /></div>
               <span class="book-date">Próximo</span>
               <?php echo $book->post_title; ?>
             </div>

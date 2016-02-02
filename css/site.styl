@@ -202,6 +202,18 @@ img
   line-height: $font-leading-basic
   font-family: monospace
   margin-bottom: $margin-small
+  position: relative
+  &:hover
+    cursor: pointer
+    .book-image
+      display: block
+
+.book-image
+  position: absolute
+  z-index: -999
+  top: -125%
+  left: 20%
+  display: none
 
 .book-date
   text-transform: capitalize

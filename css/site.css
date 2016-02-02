@@ -683,6 +683,20 @@ img {
   line-height: 1.35em;
   font-family: monospace;
   margin-bottom: 16px;
+  position: relative;
+}
+.collection-book:hover {
+  cursor: pointer;
+}
+.collection-book:hover .book-image {
+  display: block;
+}
+.book-image {
+  position: absolute;
+  z-index: -999;
+  top: -125%;
+  left: 20%;
+  display: none;
 }
 .book-date {
   text-transform: capitalize;
