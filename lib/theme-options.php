@@ -104,19 +104,19 @@ class IGV_Admin {
 		// Set our CMB2 fields
 
 		$cmb->add_field( array(
-			'name' => __( 'Test Text', 'IGV' ),
-			'desc' => __( 'field description (optional)', 'IGV' ),
-			'id'   => $this->prefix . 'test_text',
-			'type' => 'text',
-			'default' => 'Default Text',
+			'name' => __( 'Header text ES', 'IGV' ),
+			'desc' => __( 'Texto debajo del título (español)', 'IGV' ),
+			'id'   => $this->prefix . 'header_text_es',
+			'type' => 'textarea',
+			'default' => 'A través del desarrollo de cinco colecciones E-MP pretende abrir un universo de información y conocimiento que no había sido atendido ampliamente.',
 		) );
 
 		$cmb->add_field( array(
-			'name'    => __( 'Test Color Picker', 'IGV' ),
-			'desc'    => __( 'field description (optional)', 'IGV' ),
-			'id'      => $this->prefix . 'test_colorpicker',
-			'type'    => 'colorpicker',
-			'default' => '#bada55',
+			'name' => __( 'Header text EN', 'IGV' ),
+			'desc' => __( 'Texto debajo del título (inglés)', 'IGV' ),
+			'id'   => $this->prefix . 'header_text_en',
+			'type' => 'textarea',
+			'default' => '',
 		) );
 
 	}
