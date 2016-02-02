@@ -105,15 +105,15 @@ class IGV_Admin {
 
 		$cmb->add_field( array(
 			'name' => __( 'Header text ES', 'IGV' ),
-			'desc' => __( 'Texto bajo el titilo', 'IGV' ),
+			'desc' => __( 'Texto debajo del título (español)', 'IGV' ),
 			'id'   => $this->prefix . 'header_text_es',
 			'type' => 'textarea',
-			'default' => 'A través del desarrollo de cinco colecciones E-MP pretende abrir un universo de información y conocimiento que no había sido atendido ampliamente.',
+			'default' => 'A través del desarrollo de cinco colecciones E-MP pretende abrir un universo de información y conocimiento que no había sido atendido ampliamente.',
 		) );
 
 		$cmb->add_field( array(
 			'name' => __( 'Header text EN', 'IGV' ),
-			'desc' => __( 'Text below the title', 'IGV' ),
+			'desc' => __( 'Texto debajo del título (inglés)', 'IGV' ),
 			'id'   => $this->prefix . 'header_text_en',
 			'type' => 'textarea',
 			'default' => '',
