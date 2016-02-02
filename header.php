@@ -74,7 +74,7 @@
             $textEs = IGV_get_option('_igv_header_text_es');
             $textEn = IGV_get_option('_igv_header_text_en');
 
-            if (!empty($textEs && !empty($textEn))) {
+            if (!empty($textEs) && !empty($textEn)) {
               echo __('[:es]' . $textEs . '[:en]' . $textEn);
             }
           ?>
