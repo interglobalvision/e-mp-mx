@@ -9,7 +9,7 @@ get_header();
   <!-- main posts loop -->
   <section id="posts" class="container">
 <?php
-  $categories = get_terms('category', array('orderby' => 'id', 'hide_empty' => false));
+  $categories = get_terms('category', array('orderby' => 'id', 'hide_empty' => true));
 
   if ($categories) {
     foreach($categories as $i => $category) {
