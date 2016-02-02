@@ -70,8 +70,14 @@
       </div>
       <div id="subheader" class="row">
         <div class="col col-12">
-          <!-- how do we include this copy? site options? -->
-          A través del desarrollo de cinco colecciones E-MP pretende abrir un universo de información y conocimiento que no había sido atendido ampliamente.
+          <?php
+            $textEs = IGV_get_option('_igv_header_text_es');
+            $textEn = IGV_get_option('_igv_header_text_en');
+
+            if (!empty($textEs && !empty($textEn))) {
+              echo __('[:es]' . $textEs . '[:en]' . $textEn);
+            }
+          ?>
         </div>
       </div>
     </div>
