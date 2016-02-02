@@ -60,7 +60,9 @@ $margin-basic = ($gutter * 2)
 $margin-large = ($gutter * 5)
 
 $font-size-basic = 30px
+$font-size-mobile = 26px
 $font-leading-basic = 1.35em
+$font-leading-tight = 1.1em
 $font-tracking-basic = -0.005em
 
 $color-black-soft = rgb(14, 14, 14)
@@ -87,6 +89,7 @@ body
 
 h1, h2, h3, h4, h5, h6
   margin: 0.1em 0
+  line-height: $font-leading-tight
 
 h1
   font-size: 2em
@@ -273,14 +276,62 @@ img
 
 @media screen and (max-width: 755px)
 
+  .mobile-removed
+    display: none
+
   .container
-    width: 96%
+    width: 90%
 
   .col
     width: 100%
     float: none
-    margin-left: ($gutter/2)
-    box-sizing: content-box
+    margin-left: 0
+    margin-right: 0
+    box-sizing: border-box
 
   #gradient
     display: none
+
+
+  // TYPE
+
+  body
+    font-size: $font-size-mobile
+    line-height: $font-leading-basic
+
+
+  // HEADER
+
+  #header-title-holder
+    float: left
+    width: 60%
+
+  #header-language-toggle-holder
+    float: left
+    width: 40%
+    text-align: right
+
+
+  // FOOTER
+
+  #footer
+    display: none
+    position: static
+    bottom: auto
+    left: auto
+    right: auto
+    z-index: 1
+    padding: $margin-basic 0 $margin-basic 0
+
+
+  // COLLECTIONS
+
+  .collection-book
+    clear: both
+
+  .book-image
+    position: static
+    display: block
+    width: 45%
+    margin-right 5%
+    float: left

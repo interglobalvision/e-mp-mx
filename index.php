@@ -56,7 +56,7 @@ get_header();
 ?>
 
             <div class="collection-book">
-              <div class="book-image"><?php the_post_thumbnail('book-cover'); ?></div>
+              <div class="book-image"><a href="<?php echo get_permalink($book->ID); ?>"><?php the_post_thumbnail('book-cover'); ?></a></div>
               <span class="book-date"><?php echo $m->format('M Y'); ?></span>
               <a href="<?php echo get_permalink($book->ID); ?>"><?php echo $book->post_title; ?></a>
             </div>
