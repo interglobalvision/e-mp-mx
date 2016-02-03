@@ -3,7 +3,7 @@
         <div class="row">
           <div class="col col-2"></div>
           <div class="col col-10 font-sans">
-            Manufacturados en papel
+            Manufacturados en Papel
           </div>
         </div>
       </div>
