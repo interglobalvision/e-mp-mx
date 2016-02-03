@@ -66,7 +66,7 @@
           }
           ?>
         </div>
-        <div id="header-language-toggle-holder" class="col col-2">
+        <div id="header-language-toggle-holder" class="col col-2 font-mono">
           <?php echo qtranxf_generateLanguageSelectCode('both'); ?>
         </div>
       </div>
