@@ -59,10 +59,12 @@
       <div class="row">
         <div class="col col-2 mobile-removed"></div>
         <div id="header-title-holder" class="col col-8">
-          <a href="<?php echo home_url(); ?>" class="font-sans color-black"><?php bloginfo('name'); ?></a>
-          <?php if (is_page()) {
-            /*  echo get_the_title(); */
-          } ?>
+          <a href="<?php echo home_url(); ?>" class="font-sans color-black"><?php bloginfo('name'); ?></a><?php if (is_front_page()) {/* do nothing on home */} else if (is_page()) {
+             echo '<span id="header-page-title">, ' . get_the_title() . '</span>';
+          } else  {
+             echo '<span id="header-page-title">, ' . __('[:es]colecciones[:en]collections') . '</span>';
+          }
+          ?>
         </div>
         <div id="header-language-toggle-holder" class="col col-2">
           <?php echo qtranxf_generateLanguageSelectCode('both'); ?>
