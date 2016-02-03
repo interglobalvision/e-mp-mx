@@ -9,8 +9,17 @@ get_header();
 
 <main id="main-content">
 
-  <!-- this link needs to go to the latest single post -->
-  <a href="<?php echo home_url('/'); ?>">
+  <?php
+    $gradientLink = home_url('/');
+    $latestBook = get_posts(array(
+      'posts_per_page' => 1,
+      'meta_key'  => '_igv_release_date',
+    ));
+    if ($latestBook) {
+      $gradientLink = get_permalink($latestBook[0]->ID);
+    }
+  ?>
+  <a href="<?php echo $gradientLink; ?>">
     <nav id="gradient"></nav>
   </a>
 
