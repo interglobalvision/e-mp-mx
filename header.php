@@ -57,14 +57,14 @@
   <header id="header">
     <div class="container">
       <div class="row">
-        <div class="col col-2"></div>
-        <div class="col col-8">
+        <div class="col col-2 mobile-removed"></div>
+        <div id="header-title-holder" class="col col-8">
           <a href="<?php echo home_url(); ?>" class="font-sans color-black"><?php bloginfo('name'); ?></a>
           <?php if (is_page()) {
             /*  echo get_the_title(); */
           } ?>
         </div>
-        <div class="col col-2">
+        <div id="header-language-toggle-holder" class="col col-2">
           <?php echo qtranxf_generateLanguageSelectCode('both'); ?>
         </div>
       </div>

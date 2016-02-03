@@ -13,7 +13,7 @@ jQuery(document).ready(function () {
   // set main-content padding top to outer height of header
 
   $mainContent.css({
-    'padding-top': $header.outerHeight(),
+    'padding-top': ($header.outerHeight() + 3),
   });
 
   // on load remove loading gif overlay
