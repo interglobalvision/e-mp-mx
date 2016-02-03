@@ -70,6 +70,7 @@
           <?php echo qtranxf_generateLanguageSelectCode('both'); ?>
         </div>
       </div>
+<!--
       <div id="subheader" class="row">
         <div class="col col-12">
           <?php
@@ -82,5 +83,6 @@
           ?>
         </div>
       </div>
+-->
     </div>
   </header>
