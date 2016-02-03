@@ -572,7 +572,7 @@ body {
   font-family: 'Circular Std Book', serif;
 }
 .font-mono {
-  font-size: 0.6em;
+  font-size: 0.4em;
   line-height: 1.35em;
   font-family: monospace;
 }
@@ -595,7 +595,7 @@ h3 {
   font-size: 1.2em;
 }
 h4 {
-  font-size: 0.6em;
+  font-size: 0.4em;
   line-height: 1.35em;
   font-family: monospace;
 }
@@ -625,17 +625,14 @@ img {
   left: 0;
   right: 0;
   z-index: 888;
-  padding: 32px 0 32px 0;
+  padding: 32px 0 16px 0;
   background-color: #fdfdfd;
 }
 #header-page-title {
   text-transform: lowercase;
 }
 .language-chooser {
-  font-size: 0.4em;
   text-transform: uppercase;
-  line-height: 1.35em;
-  font-family: monospace;
 }
 .language-chooser li {
   display: inline-block;
@@ -759,7 +756,7 @@ img {
     width: 730px;
   }
   #header {
-    padding: 28px 0 28px 0;
+    padding: 28px 0 14px 0;
   }
   #footer {
     padding: 28px 0 28px 0;

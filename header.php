@@ -66,10 +66,11 @@
           }
           ?>
         </div>
-        <div id="header-language-toggle-holder" class="col col-2">
+        <div id="header-language-toggle-holder" class="col col-2 font-mono">
           <?php echo qtranxf_generateLanguageSelectCode('both'); ?>
         </div>
       </div>
+<!--
       <div id="subheader" class="row">
         <div class="col col-12">
           <?php
@@ -82,5 +83,6 @@
           ?>
         </div>
       </div>
+-->
     </div>
   </header>
