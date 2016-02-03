@@ -628,6 +628,9 @@ img {
   padding: 32px 0 32px 0;
   background-color: #fdfdfd;
 }
+#header-page-title {
+  text-transform: lowercase;
+}
 .language-chooser {
   font-size: 0.4em;
   text-transform: uppercase;
