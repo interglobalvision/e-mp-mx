@@ -55,7 +55,7 @@ get_header();
             $m = new \Moment\Moment($releaseDate[0]);
 ?>
 
-            <div class="collection-book">
+            <div class="collection-book u-cf">
               <div class="book-image"><a href="<?php echo get_permalink($book->ID); ?>"><?php the_post_thumbnail('book-cover'); ?></a></div>
               <span class="book-date"><?php echo $m->format('M Y'); ?></span>
               <a href="<?php echo get_permalink($book->ID); ?>"><?php echo $book->post_title; ?></a>
@@ -63,7 +63,7 @@ get_header();
 <?php
           } else {
 ?>
-            <div class="collection-book">
+            <div class="collection-book u-cf">
               <div class="book-image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/dist/e-mp-blank.jpg" /></div>
               <span class="book-date">Próximo</span>
               <?php echo $book->post_title; ?>
