@@ -608,6 +608,11 @@ a:visited {
   color: #0125f3;
   text-decoration: none;
 }
+a:hover,
+a:active:hover,
+a:visited:hover {
+  color: #0e0e0e;
+}
 a.color-black {
   color: #0e0e0e;
 }
@@ -681,9 +686,6 @@ img {
   margin-bottom: 32px;
 }
 .collection-book {
-  font-size: 0.6em;
-  line-height: 1.35em;
-  font-family: monospace;
   margin-bottom: 16px;
   position: relative;
 }
