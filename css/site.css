@@ -687,6 +687,9 @@ img {
 .blog #subheader {
   display: block;
 }
+#main-content {
+  padding-bottom: 96px;
+}
 .collection {
   margin-bottom: 32px;
 }
@@ -771,6 +774,9 @@ img {
   #subheader {
     margin-top: 14px;
   }
+  #main-content {
+    padding-bottom: 84px;
+  }
   .collection {
     margin-bottom: 28px;
   }
@@ -816,6 +822,12 @@ img {
     right: auto;
     z-index: 1;
     padding: 32px 0 32px 0;
+  }
+  #subheader {
+    margin-top: 16px;
+  }
+  #main-content {
+    padding-bottom: 8px;
   }
   .book-image {
     position: static;
