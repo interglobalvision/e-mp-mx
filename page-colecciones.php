@@ -42,7 +42,7 @@ get_header();
       if ($books) {
 ?>
        <div class="col col-4">
-        <h2>Titulos</h2>
+        <h2>Títulos</h2>
 <?php
         foreach ($books as $book) {
           $releaseDate = get_post_meta($book->ID, '_igv_release_date');
