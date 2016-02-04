@@ -42,7 +42,7 @@ get_header();
       if ($books) {
 ?>
        <div class="col col-4">
-        <h2>Titulos</h2>
+        <h2>Títulos</h2>
 <?php
         foreach ($books as $book) {
           $releaseDate = get_post_meta($book->ID, '_igv_release_date');
@@ -58,15 +58,15 @@ get_header();
             $m = new \Moment\Moment($releaseDate[0]);
 ?>
 
-            <div class="collection-book u-cf">
+            <div class="collection-book font-mono u-cf">
               <div class="book-image"><a href="<?php echo get_permalink($book->ID); ?>"><?php echo get_the_post_thumbnail($book->ID, 'book-cover'); ?></a></div>
-              <span class="book-date"><?php echo $m->format('M Y'); ?></span>
+              <span class="book-date"><a class="color-black" href="<?php echo get_permalink($book->ID); ?>"><?php echo $m->format('M Y'); ?></a></span>
               <a href="<?php echo get_permalink($book->ID); ?>"><?php echo $book->post_title; ?></a>
             </div>
 <?php
           } else {
 ?>
-            <div class="collection-book u-cf">
+            <div class="collection-book font-mono u-cf">
               <div class="book-image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/dist/e-mp-blank.jpg" /></div>
               <span class="book-date">Próximo</span>
               <?php echo $book->post_title; ?>

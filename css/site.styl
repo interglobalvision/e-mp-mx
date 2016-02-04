@@ -114,6 +114,8 @@ p
 a, a:active, a:visited
   color: $color-blue
   text-decoration: none
+  &:hover
+    color: $color-black-soft
 
 a.color-black
   color: $color-black-soft
@@ -138,7 +140,7 @@ img
   right: 0
   z-index: 888
   padding: $margin-basic 0 $margin-small 0
-  background-color: $color-white-soft
+  background-image: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 85%,rgba(255,255,255,0) 100%);
 
 #header-page-title
   text-transform: lowercase
@@ -156,8 +158,9 @@ img
   bottom: 0
   left: 0
   right: 0
-  z-index: 999
+  z-index: 888
   padding: $margin-basic 0 $margin-basic 0
+  background-image: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 15%,rgba(255,255,255,1) 100%);
 
 .page, .single
   #footer
@@ -202,9 +205,6 @@ img
   margin-bottom: $margin-basic
 
 .collection-book
-  font-size: 0.6em
-  line-height: $font-leading-basic
-  font-family: monospace
   margin-bottom: $margin-small
   position: relative
   &:hover
