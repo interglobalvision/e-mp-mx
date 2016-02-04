@@ -631,7 +631,9 @@ img {
   right: 0;
   z-index: 888;
   padding: 32px 0 16px 0;
-  background-color: #fdfdfd;
+  background-image: -webkit-linear-gradient(top,#fff 0%,#fff 85%,rgba(255,255,255,0) 100%);
+  background-image: -webkit-linear-gradient(top, #fff 0%, #fff 85%, rgba(255,255,255,0) 100%);
+  background-image: linear-gradient(to bottom,#fff 0%,#fff 85%,rgba(255,255,255,0) 100%);
 }
 #header-page-title {
   text-transform: lowercase;
@@ -648,8 +650,11 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 999;
+  z-index: 888;
   padding: 32px 0 32px 0;
+  background-image: -webkit-linear-gradient(top,rgba(255,255,255,0) 0%,#fff 15%,#fff 100%);
+  background-image: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, #fff 15%, #fff 100%);
+  background-image: linear-gradient(to bottom,rgba(255,255,255,0) 0%,#fff 15%,#fff 100%);
 }
 .page #footer,
 .single #footer {
