@@ -42,7 +42,7 @@ get_header();
       if ($books) {
 ?>
        <div class="col col-4">
-        <h2>Títulos</h2>
+        <h2><?php echo __('[:es]Títulos[:en]Titles'); ?></h2>
 <?php
         foreach ($books as $book) {
           $releaseDate = get_post_meta($book->ID, '_igv_release_date');
@@ -68,7 +68,7 @@ get_header();
 ?>
             <div class="collection-book font-mono u-cf">
               <div class="book-image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/dist/e-mp-blank.jpg" /></div>
-              <span class="book-date">Próximo</span>
+              <span class="book-date"><?php echo __('[:es]Próximo[:en]Soon'); ?></span>
               <?php echo $book->post_title; ?>
             </div>
 <?php
