@@ -617,7 +617,7 @@ a.color-black {
   color: #0e0e0e;
 }
 html {
-  background-color: #fdfdfd;
+  background-color: #fff;
   color: #0e0e0e;
 }
 img {
@@ -678,7 +678,7 @@ img {
   bottom: 0;
   left: 0;
   z-index: 666;
-  background-color: #fdfdfd;
+  background-color: #fff;
 }
 #subheader {
   display: none;
